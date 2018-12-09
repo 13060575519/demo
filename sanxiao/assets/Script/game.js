@@ -137,7 +137,7 @@ cc.Class({
     colConnected:function(){//纵列元素的相连情况
         var index1,index2;
         var start,end;
-        var count=0;//记录需要删除的star数
+        var count=0;
         for(var i=0;i<this.aii.length;i++){
             if(typeof(this.aii[i][0])=='undefined'){
                 continue;
@@ -145,7 +145,7 @@ cc.Class({
             index1=this.aii[i][0].getComponent('ai').sf;
             start=0;
             for(var j=1;j<=this.aii[i].length;j++){
-                if(j==this.aii[i].length){//当到达边界值时
+                if(j==this.aii[i].length){
                     index2=-1;
                 }else{
                     index2=this.aii[i][j].getComponent('ai').sf;
@@ -173,7 +173,7 @@ cc.Class({
     rowConnected:function(){//横列元素的相连情况
         var index1,index2;
         var start,end;
-        var count=0;//记录需删除的star数
+        var count=0;
         for(var j=0;j<this.Col;j++){
             for(var i=0;i<this.Row;){
                 if(typeof(this.aii[i][j])=='undefined'){
